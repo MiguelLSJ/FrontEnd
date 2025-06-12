@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Mais Segurança</title>
+</head>
+<body>
+    <header>
+        <div class="test">
+            <h1 id="titulo">Projeto Mais Segurança</h1>
+            <button type="button" id="lightdark"></button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class = "textBlock" id = "intro">
+                <h2>Introdução</h2>
+                <p>
+                    Os Objetivos de Desenvolvimento Sustentável (ODS’s) são planos
+                    definidos pela ONU (Organização das Nações Unidas) para auxiliar no
+                    desenvolvimento sustentável com o objetivo de proteger o meio ambiente, acabar
+                    com a pobreza e a garantir que pessoas de todos os lugares possam desfrutar da
+                    paz e prosperidade. Dentro desses objetivos, o objetivo nº 11, denominado Cidades
+                    e Comunidades Sustentáveis que tem como propósito tornar cidades e
+                    comunidades inclusivas, seguras, sustentáveis e resilientes. Baseando-se no
+                    mesmo, foi proposto aos alunos do 3º semestre do curso de ADS (Análise e
+                    Desenvolvimento de Sistemas) que desenvolvessem um projeto que represente a
+                    solução do problema escolhido, pensando nisto, nossa equipe propôs o projeto Mais
+                    Segurança.
+                </p>
+                <div class="buttAlign">
+                    <button id = "but1" onclick="link(1)" title="1. Erradicação da pobreza">
+                        <img src="https://www.uninfo.org/sdgs/SDG_1.svg" width="100%" height="80%">
+                    </button>
+                    <button id = "but2" onclick="link(2)" title="2. Fome zero e agricultura sustentável">
+                        <img src="https://www.uninfo.org/sdgs/SDG_2.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but3" onclick="link(3)" title="3. Saúde e Bem-Estar">
+                        <img src="https://www.uninfo.org/sdgs/SDG_3.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but4" onclick="link(4)" title="4. Educação de qualidade">
+                        <img src="https://www.uninfo.org/sdgs/SDG_4.svg" width="90%" height="100%">
+                    </button>
+                    <button id = "but5" onclick="link(5)" title="5. Igualdade de género">
+                        <img src="https://www.uninfo.org/sdgs/SDG_5.svg" width="70%" height="100%">
+                    </button>
+                    <button id = "but6" onclick="link(6)" title="6. Água potável e saneamento">
+                        <img src="https://www.uninfo.org/sdgs/SDG_6.svg" width="70%" height="100%">
+                    </button>
+                    <button id = "but7" onclick="link(7)" title="7. Energia limpa e acessível">
+                        <img src="https://www.uninfo.org/sdgs/SDG_7.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but8" onclick="link(8)" title="8. Trabalho decente e crescimento económico">
+                        <img src="https://www.uninfo.org/sdgs/SDG_8.svg" width="80%" height="90%">
+                    </button>
+                    <button id = "but9" onclick="link(9)" title="9. Indústria, inovação e infraestrutura">
+                        <img src="https://www.uninfo.org/sdgs/SDG_9.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but10" onclick="link(10)" title="10. Redução das desigualdades">
+                        <img src="https://www.uninfo.org/sdgs/SDG_10.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but11" onclick="link(11)" title="11. Cidades e comunidades sustentáveis">
+                        <img src="https://www.uninfo.org/sdgs/SDG_11.svg" width="90%" height="80%">
+                    </button>
+                    <button id = "but12" onclick="link(12)" title="12. Consumo e produção responsáveis">
+                        <img src="https://www.uninfo.org/sdgs/SDG_12.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but13" onclick="link(13)" title="13. Ação contra a mudança global do clima">
+                        <img src="https://www.uninfo.org/sdgs/SDG_13.svg" width="100%" height="100%">
+                    </button>
+                    <button id = "but14" onclick="link(14)" title="14. Vida na água">
+                        <img src="https://www.uninfo.org/sdgs/SDG_14.svg" width="90%" height="90%">
+                    </button>
+                    <button id = "but15" onclick="link(15)" title="15. Vida terrestre">
+                        <img src="https://www.uninfo.org/sdgs/SDG_15.svg" width="85%" height="100%">
+                    </button>
+                    <button id = "but16" onclick="link(16)" title="16. Paz, justiça e instituições eficazes">
+                        <img src="https://www.uninfo.org/sdgs/SDG_16.svg" width="90%" height="70%">
+                    </button>
+                    <button id = "but17" onclick="link(17)" title="17. Parcerias e meios de implementação">
+                        <img src="https://www.uninfo.org/sdgs/SDG_17.svg" width="100%" height="100%">
+                    </button>
+                </div>
+            </div>
+            <div class = "textBlock" id = "objetivo">
+                <h2>Objetivo</h2>
+                <p>
+                    O projeto tem como objetivo aumentar a segurança da
+                    população e proporcionar espaços onde os habitantes possam seguir sua rotina e
+                    aproveitar dos espaços públicos de forma tranquila. 
+                </p>
+                <img src="images/escudo.png" alt = "segurança" class="imagem" id = "escudo"></img>
+            </div>
+            <div class = "textBlock" id = "metodo">
+                <h2>Método</h2>
+                <p>
+                    Nosso projeto, que
+                    por meio de uma colaboração com a Polícia Civil, colocará câmeras de segurança
+                    em pontos comuns de locomoção pela cidade, assim como em praças e outros
+                    locais públicos de lazer que pessoas costumam se reunir. Além disso, postos de
+                    resposta rápida da Polícia serão construídos próximos das localizações das
+                    câmeras, onde haverá uma equipe encarregada de verificar as gravações e atender
+                    denúncias próximas de atividade criminosa.
+                </p>
+                <!----Animação de exemplo do projeto/!---->
+                <div class = "map" title="Parque">
+                    <div id="pilar">
+                        <div id="branco"></div>
+                        <div id="parteCamera"></div>
+                        <div id="bola"></div>
+                    </div>
+                    <div id="sol"></div>
+                    <div id="terra"></div>
+                    <div id="terra2"></div>
+                </div>
+            </div>
+            <div class = "textBlock" id = "d&r">
+                <h2>Desenvolvimento e Resultados</h2>
+                <p>
+                    É esperado que, com a instalação deste projeto, a segurança
+                    pública da nossa cidade aumente de forma significativa e que a espera pela
+                    resposta de policiais ao realizar uma denúncia diminua em vários locais da cidade.
+                </p>
+                <div class="imgAlign">
+                    <img src="images/bob_pensante.jpg" alt="placeholder" class="imagem" id="deRe" title="Placeholder Desenvolvimento"></img>
+                    <img src="images/bob_Idea.jpg" alt="placeholder" class="imagem" id="deRe2" title="Placeholder Resultados"></img>
+                </div>
+            </div>
+            <div class = "textBlock" id = "cFinais">
+                <h2>Considerações Finais</h2>
+                <p>
+                    A segurança é um pilar muito importante do
+                    desenvolvimento de uma comunidade sustentável e deve ser implementada cada
+                    vez mais de forma que desincentive o crime, ao invés de apenas focar em puni-lo
+                    após já ter acontecido.
+                </p>
+                <img src="images/compreensivel.jpeg" id="cFImage" title="placeholder C.Finais">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>😐</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
