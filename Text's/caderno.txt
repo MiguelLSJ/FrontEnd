@@ -1,0 +1,176 @@
+//-------------------------------pg1----------------------------------
+                               livro 1
+                Funções e Manipulação de listas com JS
+
+function nomeDaFunc () {
+    console.log(". . .");
+}
+declaração de função ^
+
+const nomeDeOutraFunc = function () {
+    console.log("- - -");
+}
+function expression ^
+
+const nomeDeUmaTerceiraFunc = () => {
+    console.log("_ _ _");    
+}
+Esse tipo de função não tem contesto*. . . A delcaração normal tem.
+function expression type (arrow function) 2 ^
+
+nomeDaFunc();
+nomeDeOutraFunc();
+
+//--------------------------------pg2---------------------------------
+
+function soma (x) {
+    return function (y) {
+        return x + y;
+    }
+}
+
+    exemplo de contexto
+    o (x) é passado de forma indireta para a função retornada.
+    closure . . .
+
+
+const somaParcial = soma(10);
+
+console.log(somaParcial(20));
+console.log(somaParcial(30));
+console.log(somaParcial(40));
+
+//--------------------------------pg3----------------------------------
+
+const pessoa = {
+    nome: "Miguel",
+    idade: 19,
+    //Objeto ^
+}
+
+function gritar(prefixo) {
+    console.log(prefixo, this.nome);
+}
+//formas de invocar uma func.
+
+gritar("See é loco");
+//não pode aplicar o contexto poi não declarado no objeto.
+gritar.call(pessoa, "Fala");
+//não usa o [array].
+gritar.apply(pessoa, ["Nooosssaa"]);
+//apply pode aplicar o contexto do objeto na função.
+
+//-------------------------------pg4-----------------------------------
+
+function adicao (x, y) {
+    return x + y;
+}
+
+function multiplicacao (x, y) {
+    return x * y;
+}
+
+function calculadora(x, operacao, y) {
+    console.log(operacao(x, y));
+}
+
+calculadora(10, adicao, 20);
+calculadora(10, multiplicacao, 20);
+//callback.
+
+document.getElementById("btn1").addEventListener("click", () => {
+    console.log("Clicou");
+});
+//mesmo princípio.
+
+//---------------------------------pg5---------------------------------
+
+const lista = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+
+/*lista.forEach((value, i, listRef) => {
+    console.log(value + i);
+});
+
+for (let i = 0; i < lista.length; i++) {
+    const element = array[i];
+}*/
+
+const cb = (value, i , listRef) => {
+    console.log(value + i);
+}
+
+lista.forEach(cb);
+//Mesma coisa neste contexto.
+for (let i = 0; i < lista.length; i++) {
+    const element = array[i];
+    cb(element, i, lista);
+}
+
+//------------------------------pg6-----------------------------------
+
+const lista = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+
+const listaPares = lista.filter((element) => {
+    return (element % 2 === 0);
+});
+
+console.log(lista);
+console.log(listaPares);
+
+//--------------------------------pg7----------------------------------
+
+class Pessoa {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+const lista = [new Pessoa ("Miguel"), new Pessoa ("Rafael"), new Pessoa ("Mauro"), new Pessoa ("Silvia")];
+//lista de objetos ^
+
+/*const listaNomes = lista.map((element, i) => {
+    //return `${i} - ${element.name}`;
+    return element.name;
+    outro jeito de fazer.
+})*/
+
+//const listaNomes = lista.map((element) =>  element.name);
+
+const listaNomesEmHTML = lista.map((element) => {
+    return `
+        <li>
+            ${element.name}
+        </li>    
+    `;
+});
+
+console.log(listaNomesEmHTML);
+
+//---------------------------------------pg8--------------------------------------
+
+const lista = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
+
+const somaTotal = lista.reduce((previous, current) => {
+    return previous + current;
+}, 0);
+
+console.log(somaTotal);
+
+//---------------------------------------pg9---------------------------------------
+
+const lista = [{nome: "Miguel"}, {nome: "Gabriel"}, {nome: "Mateus"}, {nome: "Alan"}, {nome: "Andrew"}];
+
+//console.log(lista.map((e) => e.nome).join(",\n")); 
+
+//console.log(lista.join(","));
+
+//console.log(lista.map(e => e.nome).filter((e) => e.startsWith("A")).join(", "));
+
+const elementosEmHtml = lista.filter((e) => e.nome.startsWith("A")).map(e => `<li> ${e.nome}</li>`).join("");
+
+console.log (elementosEmHtml);
+
+//---------------------------------------pg10---------------------------------------
+                                        livro 2
+
+
